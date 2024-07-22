@@ -11,7 +11,7 @@
 
 function validatePIN(pin) {
     //return true or false
-    return /^cambiar$/.test(pin);
+    return /^([0-9]{4}|[0-9]{6}$/.test(pin);
 
 }
 
