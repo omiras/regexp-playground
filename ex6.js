@@ -1,35 +1,36 @@
 /**
- * Vamos a combinar método de array y expresiones regulares
- */
-
-/**
- * Queremos crear una función que filtre las palabras que contienen solo letras (sin números ni caracteres especiales)
+ * Queremos crear una función que filtre un array de strings y que solo se quede con aquellos que representan una matrícula de coche española https://es.wikipedia.org/wiki/Matr%C3%ADculas_automovil%C3%ADsticas_de_Espa%C3%B1a
  * 
- * @param {Array<string>} words - Un array de palabras
- * @returns {Array<string>} - Devuelve un array con las palabras que contienen solo letras
+ * @param {Array<string>} words - Un array de strings
+ * @returns {Array<string>} - Devuelve un array con los strings que son matrículas de coche españlas
  */
 
 function filterWords(words) {
-    // Expresión regular para verificar si una palabra contiene solo letras. SOLAMENTE cambiar la siguiente línea
+    // Expresión regular para verificar si una palabra contiene solo letras.
     const regex = /^cambiar$/
 
-    // Usa el método filter para filtrar las palabras que coinciden con la expresión regular
-    return words.filter(word => regex.test(word));
+    // Usa el método de array adecuado para FILTRAR cada uno de los strings para comprobar si realmente son una matrícula usando la expresión regular
+    return;
 }
 
 // Juegos de pruebas
 
 // Prueba 1: Array con palabras mixtas
-// Explicación: ["hello", "world123", "test", "foo!"] contiene palabras con solo letras ("hello", "test")
-// Resultado esperado: ["hello", "test"]
-console.log(filterWords(["hello", "world123", "test", "foo!"])); // ["hello", "test"]
+// Explicación: ["1234ABC", "5678DEF", "test", "foo!"] contiene palabras con formato de matrícula ("1234ABC", "5678DEF")
+// Resultado esperado: ["1234ABC", "5678DEF"]
+console.log(filterWords(["1234ABC", "5678DEF", "test", "foo!"])); // ["1234ABC", "5678DEF"]
 
 // Prueba 2: Array con todas las palabras válidas
-// Explicación: ["apple", "banana", "cherry"] todas las palabras contienen solo letras
-// Resultado esperado: ["apple", "banana", "cherry"]
-console.log(filterWords(["apple", "BANANA", "cherry"])); // ["apple", "BANANA", "cherry"]
+// Explicación: ["1234ABC", "5678DEF", "9012GHI"] todas las palabras son matrículas válidas
+// Resultado esperado: ["1234ABC", "5678DEF", "9012GHI"]
+console.log(filterWords(["1234ABC", "5678DEF", "9012GHI"])); // ["1234ABC", "5678DEF", "9012GHI"]
 
 // Prueba 3: Array con todas las palabras no válidas
-// Explicación: ["123", "hello!", "world?"] ninguna de las palabras contiene solo letras
+// Explicación: ["1234ABC", "hello!", "world?"] solo una palabra contiene el formato de matrícula
+// Resultado esperado: ["1234ABC"]
+console.log(filterWords(["1234ABC", "hello!", "world?"])); // ["1234ABC"]
+
+// Prueba 4: Array sin ninguna matrícula válida
+// Explicación: ["hello", "world", "foo", "bar"] ninguna de las palabras tiene el formato de matrícula
 // Resultado esperado: []
-console.log(filterWords(["123", "hello!", "world?"])); // []
+console.log(filterWords(["hello", "world", "foo", "bar"])); // []
