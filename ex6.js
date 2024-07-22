@@ -22,12 +22,12 @@ function filterWords(words) {
 // Prueba 1: Array con palabras mixtas
 // Explicación: ["hello", "world123", "test", "foo!"] contiene palabras con solo letras ("hello", "test")
 // Resultado esperado: ["hello", "test"]
-console.log(filterWords(["hello", "world123", "TEST", "foo!"])); // ["hello", "TEST"]
+console.log(filterWords(["hello", "world123", "test", "foo!"])); // ["hello", "test"]
 
 // Prueba 2: Array con todas las palabras válidas
 // Explicación: ["apple", "banana", "cherry"] todas las palabras contienen solo letras
 // Resultado esperado: ["apple", "banana", "cherry"]
-console.log(filterWords(["apple", "banana", "cherry"])); // ["apple", "banana", "cherry"]
+console.log(filterWords(["apple", "BANANA", "cherry"])); // ["apple", "BANANA", "cherry"]
 
 // Prueba 3: Array con todas las palabras no válidas
 // Explicación: ["123", "hello!", "world?"] ninguna de las palabras contiene solo letras
