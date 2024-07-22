@@ -15,9 +15,9 @@ function extractHexColors(s) {
 
 
 // Prueba 1: Cadena con un color hexadecimal 
-// Explicación: "#123123 is a short form for #112233."
-// Resultado esperado: ["#123"]
-console.log(extractHexColors("#0041C2 is a blue called 'Blueberry Blue' ")); // ["#123"]
+// Explicación: "#0041C2 is a valid color."
+// Resultado esperado: ["#0041C2"]
+console.log(extractHexColors("#0041C2 is a blue called 'Blueberry Blue' ")); // ["#0041C2"]
 
 // Prueba 1: Cadena con colores hexadecimales
 // Explicación: "#ff5733 is a bright color and #33ff57 is a green color."
