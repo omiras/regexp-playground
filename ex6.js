@@ -6,7 +6,7 @@
  */
 
 function filterWords(words) {
-    // Expresión regular para verificar si una palabra contiene solo letras.
+    // Expresión regular para verificar si una palabra es una matrícula de coche española.
     const regex = /^cambiar$/
 
     // Usa el método de array adecuado para FILTRAR cada uno de los strings para comprobar si realmente son una matrícula usando la expresión regular
