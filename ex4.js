@@ -8,7 +8,8 @@
 
 function stringClean(s) {
     // Cambia únicamente la siguiente línea
-    const regex = /changeme/g;
+    // Corregir 19.35 -> mirar play8.js
+    const regex = /[0-9]/g;
 
     //https://javascript.info/regexp-methods#str-replace-str-regexp-str-func
     return s.replace(regex, '');

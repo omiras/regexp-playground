@@ -10,8 +10,14 @@
  */
 
 function validatePIN(pin) {
-    //return true or false
-    return /^cambiar$/.test(pin);
+    // return true or false
+    // Mire si el string que nos pasan por el parámetro pin es:
+    // 4 dígitos
+    // o 6 dígitas
+    // primera expresion regular | segunda expresión regular
+    // Ejemplo: const regexp = /^cama$|^litera$/;
+    // Corregir: 19.05
+    return /^(\d{4}|\d{6})$/.test(pin);
 
 }
 

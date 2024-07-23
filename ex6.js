@@ -6,11 +6,12 @@
  */
 
 function filterWords(words) {
-    // Expresión regular para verificar si una palabra contiene solo letras.
-    const regex = /^cambiar$/
+    // Expresión regular para verificar si una palabra es una matrícula de coche española (a partir del año 2000).
+    // Corregir 21.10
+    const regex = /^\d{4}[A-Z]{3}$/i;
 
     // Usa el método de array adecuado para FILTRAR cada uno de los strings para comprobar si realmente son una matrícula usando la expresión regular
-    return;
+    return words.filter(w => regex.test(w));
 }
 
 // Juegos de pruebas
@@ -18,7 +19,7 @@ function filterWords(words) {
 // Prueba 1: Array con palabras mixtas
 // Explicación: ["1234ABC", "5678DEF", "test", "foo!"] contiene palabras con formato de matrícula ("1234ABC", "5678DEF")
 // Resultado esperado: ["1234ABC", "5678DEF"]
-console.log(filterWords(["1234ABC", "5678DEF", "test", "foo!"])); // ["1234ABC", "5678DEF"]
+console.log(filterWords(["1234ABC", "5678BCL", "test", "foo!"])); // ["1234ABC", "5678DEF"]
 
 // Prueba 2: Array con todas las palabras válidas
 // Explicación: ["1234ABC", "5678DEF", "9012GHI"] todas las palabras son matrículas válidas
