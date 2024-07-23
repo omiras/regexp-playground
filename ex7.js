@@ -3,15 +3,23 @@
  * 
  * Ayuda: https://lenguajejs.com/javascript/regexp/expresiones-regulares/#c%C3%B3mo-crear-una-regexp
  */
-
+/**
+ * 
+ * @param {string} s1 String principal. Cadena de texto donde vamos a realizar la búsqueda 
+ * @param {string} s2 String secundario.  
+ * @returns string Retorna true si s2 está contenido en s1. En caso contrario retorna false
+ */
 function isSubstring(s1, s2) {
+    const regexp = new RegExp(s2, "i");
 
+    // Busco en el string s1 si contiene el string s2
+    return regexp.test(s1);
 }
 
 // Prueba 1: Substring presente en la cadena principal
 // Explicación: "world" es un substring de "Hello, world!"
 // Resultado esperado: true
-console.log(isSubstring("Hello, world!", "world")); // true
+console.log(isSubstring("Hello, world!", "WORLD")); // true
 
 // Prueba 2: Substring no presente en la cadena principal
 // Explicación: "planet" no es un substring de "Hello, world!"
