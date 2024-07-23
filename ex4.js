@@ -8,9 +8,11 @@
 
 function stringClean(s) {
     // Cambia únicamente la siguiente línea
-    const regex = /changeme/g;
+    // El operador global /g hará que el método .replace NO se detenga tras encontrar el primer número
+    const regex = /[0-9]/g;
 
     //https://javascript.info/regexp-methods#str-replace-str-regexp-str-func
+    // La función replace va a usar la expresión regular regex para buscar todos los carácteres que son un número en el string 's'. Luego va a subtituir ese caráctere por el carácter vacío '', "limpiando" así el string 's' de números. 
     return s.replace(regex, '');
 }
 

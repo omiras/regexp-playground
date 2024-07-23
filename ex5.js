@@ -9,6 +9,16 @@
 
 function extractHexColors(s) {
     /** Modifica solamente el cuerpo de la función */
+    // Expresión regular:
+    // 1. Debe contener #
+    // 2. Luego debe tener 6 dígitos o 6 carácteres
+    // 3. gi -> la i para no tener en cuenta mayúsculas ni minúsculas. La g para no denerse frente al primer match (en el string puede haber más de un color hexadecimal)
+    // 4. NO ponemos ^ ni $. Porque si los ponemos estamos obligando a que el string empiece por # y/o acabe por número o carácter. Dicho de otro modo, el color hexadecimal puede encontrarse en cualquier posición del string
+    const result = s.match(/#[0-9A-Z]{6}/gi);
+
+    // result || [] -> Si result tiene valor devolvemos result. Si result es null se devuelve []
+    return result || [];
+
 }
 
 // Juegos de pruebas

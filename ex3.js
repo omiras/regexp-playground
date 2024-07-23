@@ -11,7 +11,12 @@
 
 function validatePIN(pin) {
     //return true or false
-    return /^([0-9]{4})$|^([0-9]{6})$/.test(pin);
+    // Usamos () para capturar la expresión regular (agrupar)
+    // De esta forma no tenemos que repetir ^ y $
+    // \d -> un dígito
+    // \d{4} -> Aceptamos 4 dígitos consecutivos
+    // El operador | separa las dos posibles opciones: o un PIN de 4 dígitos o un PIN de 6 dígitos
+    return /^(\d{4}|\d{6})$/.test(pin);
 
 }
 
