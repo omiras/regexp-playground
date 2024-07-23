@@ -3,7 +3,12 @@
  * 
  * Ayuda: https://lenguajejs.com/javascript/regexp/expresiones-regulares/#c%C3%B3mo-crear-una-regexp
  */
-
+/**
+ * 
+ * @param {string} s1 String principal. Cadena de texto donde vamos a realizar la búsqueda 
+ * @param {string} s2 String secundario.  
+ * @returns string Retorna true si s2 está contenido en s1. En caso contrario retorna false
+ */
 function isSubstring(s1, s2) {
 
 }
