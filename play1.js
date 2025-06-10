@@ -19,8 +19,9 @@ let regex = /^[0-9]{8}[A-Z]$/;
 
 // Los Regexp tienen un método que se llama .test
 // El método .test devuelve true si el string que le pasamos por parámetro cumple con la expresión regular y false en caso contrario.
+// IMPORTANTE: NO estamos validando si la letra es "la que toca" para esa numeración
 
-let isValid = regex.test("12345678L");
+let isValid = regex.test("12345678L"); // entradas invalids: 333444A, 123456781,  
 
 if (isValid) {
     console.log("El DNI introducido es válido");

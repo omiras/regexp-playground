@@ -7,7 +7,7 @@
 
 const regexp = /^[0-9]+(\$|€)$/;
 
-console.log(regexp.test("3451€"));
-console.log(regexp.test("3451$"));
-console.log(regexp.test("$"));
-console.log(regexp.test("$55"));
+console.log(regexp.test("3451€")); // true
+console.log(regexp.test("3451$")); // true
+console.log(regexp.test("$")); // false
+console.log(regexp.test("$55")); // false

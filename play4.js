@@ -1,8 +1,9 @@
+// En el diccionario de la RAE se acepta: casita, casota, caseta
 
-const regexp = /cas(i|o)ta/;  // RegExp que acepta "casita" o "casota"
+const regexp = /cas[aei]ta/;  // RegExp que acepta "casita" o "casota"
 
 console.log(regexp.test("casita"));        // true
 console.log(regexp.test("casota"));        // true
-console.log(regexp.test("caseta"));        // false
+console.log(regexp.test("caseta"));        // true
 
-const regexurl= /^(http|https):/; //Las URL puede empezar por http o https
+console.log(regexp.test("casuta"));        // false
