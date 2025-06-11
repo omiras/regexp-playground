@@ -19,19 +19,27 @@
         <label for="title">Nombre del producto:</label>
         <input type="text" id="title" name="title" pattern="cambiar" required>
         <small>Solamente puede contener carácteres, números, guión normal y espacios en blanco</small>
-
-
+        <ul>
+            <li><strong>Ejemplos válidos:</strong> Televisor-4K, Mesa 123, Producto-X</li>
+            <li><strong>Ejemplos inválidos:</strong> Producto@, Mesa!, #Silla</li>
+        </ul>
         <!-- Precio del producto -->
         <label for="input">Precio:</label>
         <input type="text" id="price" name="price" pattern="cambiar" required>
         <small>Formatos aceptados: 12.49 | 15.3 | 20</small>
-
+        <ul>
+            <li><strong>Ejemplos válidos:</strong> 12.49, 15.3, 20</li>
+            <li><strong>Ejemplos inválidos:</strong> 12,49, 15.333, 20., .99, 20a</li>
+        </ul>
         <!-- FEcha de alta -->
         <label for="date">Fecha (DD/MM/YYYY):</label>
         <input type="text" id="date" name="date" pattern="cambiar" required>
         <small>Formato: 31/12/2024 . Nota: Solamente puedes comprobar el formato en el atributo pattern, no puedes
             comprobar si un día es correcto para un mes en concreto. </small>
-
+        <ul>
+            <li><strong>Ejemplos válidos:</strong> 01/01/2024, 31/12/2025, 15/06/1999</li>
+            <li><strong>Ejemplos inválidos:</strong> 1/1/2024, 31-12-2024, 2024/12/31, 99/99/9999</li>
+        </ul>
         <button type="submit">Enviar</button>
     </form>
     <script>
@@ -42,3 +50,5 @@
         });
     </script>
 </body>
+
+</html>
